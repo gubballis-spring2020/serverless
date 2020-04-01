@@ -30,7 +30,6 @@ exports.handler = (event, context) => {
             route53.listHostedZones({}, (err, data) => {
                 console.log("data--------hostedzones",data);
                 let domainName = data.HostedZones[0].Name;
-                //let domainName = 'csye6225-su19-janawlekars.me.';
                 domainName = domainName.substring(0, domainName.length - 1);
                 const emailObject = {
                     Destination: {
