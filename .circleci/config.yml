@@ -26,7 +26,7 @@ jobs:
             cd ..
             pwd
             ls -la
-            aws lambda update-function-code --function-name myLamda --zip-file fileb://serverless.zip
+            aws lambda update-function-code --function-name myLambda --zip-file fileb://serverless.zip
 
 workflows:
   version: 2
