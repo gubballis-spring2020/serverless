@@ -23,7 +23,7 @@ exports.handler = (event, context) => {
                 Item: {
                     email_address: { S: email }, links: { S: link} ,
                     token: { S: context.awsRequestId },
-                    ttl: { N: (Math.floor(Date.now() / 1000) + 900).toString() }
+                    ttl: { N: (Math.floor(Date.now() / 1000) + 3600).toString() }
                 }
             };
             dynamoDB.putItem(putItemObject, () => {});
